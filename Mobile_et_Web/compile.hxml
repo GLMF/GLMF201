@@ -1,0 +1,9 @@
+-cp src-srv
+-cp framework
+-main Index
+-lib hxnodejs
+-lib haxelow
+-resource views/index.html@index
+-resource views/part-index.html@part-index
+-resource views/part-author-list.html@part-author-list
+-js index.js

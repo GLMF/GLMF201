@@ -1,0 +1,26 @@
+	<div id="header"><h1>Liste des auteurs</h1></div>
+	<div id="content">
+		<table><thead><tr><th>Prénom</th><th>Nom</th><th></th></tr></thead><tbody>
+			::foreach authors::
+			<tr>
+				<td><input form="updateAuthor-::id::" type="text" required="required" name="firstname" value="::firstname::"/></td>
+				<td><input form="updateAuthor-::id::" type="text" required="required" name="lastname" value="::lastname::"/></td>
+				<td><ul class="hbox">
+					<li><form id="updateAuthor-::id::" method="post" action="/author/::id::" style="display:none"></form>
+						<button form="updateAuthor-::id::" type="submit" class="icon_record"></button></li>
+					<li><form id="deleteAuthor-::id::" method="post" action="/author/::id::" style="display:none"></form>
+						<button form="deleteAuthor-::id::" type="submit" class="icon_remove"></button></li>
+				</ul></td>
+			</tr>
+			::end::
+			<tr>
+				<td><input form="createAuthor" type="text" required="required" name="firstname"/></td>
+				<td><input form="createAuthor" type="text" required="required" name="lastname"/></td>
+				<td><form id="createAuthor" method="post" action="/author" style="display:none"></form>
+					<button form="createAuthor" type="submit" class="icon_add"></button></td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div id="footer">
+		<a class="button icon_back" href="/"></a>
+	</div>

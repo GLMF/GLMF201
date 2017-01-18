@@ -1,0 +1,17 @@
+     1                                  section .text
+     2                                  global  _start
+     3                                  
+     4                                  _start:
+     5 00000000 B9[00000000]                mov ecx, message
+     6 00000005 BA0C000000                  mov edx, length
+     7 0000000A BB01000000                  mov ebx, 1
+     8 0000000F B804000000                  mov eax, 4
+     9 00000014 CD80                        int 0x80
+    10                                  
+    11 00000016 B801000000                  mov eax, 1
+    12 0000001B CD80                        int 0x80
+    13                                  
+    14                                  section .data
+    15 00000000 48656C6C6F20474C4D-         message db 'Hello GLMF!', 10
+    16 00000009 46210A             
+    17                                      length equ $ - message

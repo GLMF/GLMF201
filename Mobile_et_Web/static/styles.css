@@ -1,0 +1,156 @@
+/* 
+WARD - Web Application Responsive Design CSS
+v0.1.4 (2016-02-29) 
+Copyright Frank ENDRES <frankendres@tuxfamily.org>
+License: Creative-Commons By-Sa
+*/
+
+* { margin: 0; padding: 0; font-size: 12pt; font-family: Roboto, sans-serif; }
+
+html, body { height: 100%; }
+div#page { min-height: 100%; padding: 0 1%; position: relative; }
+div#header { height: 2.5em; border-bottom: 1px solid; position: relative; }
+div#content { margin-top: 0.5em; padding-bottom: 1.5em; }
+div#content:nth-last-child(2) { padding-bottom: 3em; }
+div#footer { position: absolute; bottom: 0; left: 1%; width: 98%; 
+	height: 2.5em; border-top: 1px solid; overflow : hidden; }
+div#footer ul.hbox, #header ul.hbox { margin-top: 0.25em; }
+
+ul.hbox { list-style-type: none; padding: 0; }
+ul.hbox li { display: block; float: left; margin-bottom: 0.5em }
+ul.hbox li:first-child:last-child { width: 100%; } /* future: use flex boxes */
+ul.hbox li:first-child:nth-last-child(2), ul.hbox li:nth-child(2):last-child {
+	width: 50%; }
+ul.hbox li:first-child:nth-last-child(3), ul.hbox li:nth-child(2):nth-last-child(2), ul.hbox li:nth-child(3):last-child {
+	width: 33.3333%; }
+ul.hbox li:first-child:nth-last-child(4), ul.hbox li:nth-child(2):nth-last-child(3), ul.hbox li:nth-child(3):nth-last-child(2), ul.hbox li:nth-child(4):last-child {
+	width: 25%; }
+ul.hbox li:first-child:nth-last-child(5), ul.hbox li:nth-child(2):nth-last-child(4), ul.hbox li:nth-child(3):nth-last-child(3), ul.hbox li:nth-child(4):nth-last-child(2), ul.hbox li:nth-child(5):last-child {
+	width: 20%; }
+ul.hbox a.button, ul.hbox button { margin-bottom: 0; 
+	margin-top: 0; }
+
+div.popup div a.button { margin-top: 0; }
+div.popup { position: relative; }
+div.popup div { position: absolute; z-index: 1; width: 100%; 
+	max-height : 0; overflow : hidden; transition: 1s max-height 0.3s; }
+div.popup:hover div { max-height : 20em; }
+/* div.popup>a:first-child { border-radius: 0.5em; }
+div.popup:hover>a:first-child { border-bottom-left-radius: 0em; 
+	border-bottom-right-radius: 0em; }
+div.popup div a:last-child { border-bottom-left-radius: 0.5em; 
+	border-bottom-right-radius: 0.5em; } */
+
+#header .right, #header .left { position : absolute; top : -0.25em; }
+#header form.right, #header form.left { position : absolute; top : -0.25em; width : 34px; }
+#header a.right, #header a.left { width : 28px; padding-left: 3px; }
+#header .right { right : 1% }
+#header .left { left: -1%; }
+
+h1 { margin-top: 1em; line-height: 1.5em; padding-left: 1em;  
+	border-bottom: 2px solid }
+div#header h1 { text-align: center; border-bottom: none; 
+	padding-left: 0; line-height: 2.5em; margin-top: 0; }
+h2 {margin-top: 1em; padding-left: 1em; 
+	border-bottom: 1px solid }
+p { text-indent: 1em; text-align: justify; margin-top: 0.5em; }
+ul, ol, dl { margin-top: 0.5em; padding-left: 2em; }
+dt { display: list-item; list-style-type : circle; float: left; margin-right: 0.5em; }
+dd { clear : right;  }
+li { text-align: justify; }
+
+table, td, th { border: 1px solid; border-collapse: collapse; }
+table { width: 100%; margin-top: 0.5em; }
+th, th a { white-space: nowrap; }
+th, td { padding: 0em 0.5em; }
+tr { line-height: 2.5em; }
+td a.button, td button, th a.button, th button, td ul.hbox { 
+	margin-top: 0.25em; margin-bottom: 0.25em; }
+td ul.hbox li { margin-bottom: 0.25em; }
+
+form { margin: 0.5em 0; width: 100%; padding: 0.5em 0; }
+form.button { margin: 0; padding: 0; }
+input[type="text"], input[type="password"], input[list], input[type="email"], input[type="tel"], input[type="search"], input[type="number"], input[type="url"], input[type="range"], input[type="date"], input[type="time"], input[type="color"], select, textarea { 
+	width: 95%; margin-left: 2%; display: block; }
+label { margin-top: 0.25em; display: block; 
+	vertical-align: middle; }
+fieldset { border: none; margin-top: 0.5em; }
+legend { border-bottom: 1px solid; }
+input[type="radio"], input[type="checkbox"] { float: left; 
+	margin-right: 0.5em; vertical-align: middle; }
+input[required] { font-weight: bold; }
+
+a.button, button { 
+	display: block; width: 96%; margin-left: 2%; text-align: center;
+	margin-top: 0.5em; border: 1px outset; }
+a.button { text-decoration: none; font-weight: normal; 
+	height: 2em; line-height: 2em; }
+button { height: 2.1em; line-height: 2.1em; cursor: pointer; }
+button span, a.button span { position: relative; bottom: 0.2em; }
+button img, a.button img { position: relative; top: 0.25em; }
+
+ul.vbox { list-style-type: none; padding: 0; }
+ul.vbox li { width: 98%; margin-left: 1%;
+	border: 1px outset; text-align: center;
+	line-height: 2em; height: 2em; }
+ul.vbox li:first-child, ul.vbox li:first-child a { border-top-left-radius: 0.5em; 
+	border-top-right-radius: 0.5em; }
+ul.vbox li:last-child, ul.vbox li:last-child a { border-bottom-left-radius: 0.5em; 
+	border-bottom-right-radius: 0.5em; }
+ul.vbox a { text-decoration: none; width : 100%; 
+	display: block; position: relative; }
+/* ul.vbox a:after { content: url(/static/icons/back.png); 
+	transform: rotate(0.5turn); position: absolute; 
+	right: 1em; bottom: 0.25em; } */
+
+
+.icon_backward:before, .icon_forward:before, .icon_play:before, .icon_stop:before, .icon_pause:before, .icon_record:before, 
+.icon_add:before, .icon_cancel:before, .icon_edit:before, .icon_find:before, .icon_logout:before, .icon_ok:before, .icon_remove:before,
+.icon_clear:before, .icon_password:before, .icon_mail:before, .icon_home:before, .icon_help:before, .icon_back:before,
+.icon_attachement:before, .icon_archive:before, .icon_prefs:before, .icon_system:before, .icon_close:before,
+.icon_address:before, .icon_calendar:before, .icon_rss:before { 
+	position: relative; top: 0.25em; margin-right: 4px; }
+.icon_add:before { content: url(/static/icons/add.png); }
+.icon_address:before { content: url(/static/icons/address.png); }
+.icon_archive:before { content: url(/static/icons/archive.png); }
+.icon_attachement:before { content: url(/static/icons/attachement.png); }
+.icon_back:before { content: url(/static/icons/back.png); }
+.icon_calendar:before { content: url(/static/icons/calendar.png); }
+.icon_cancel:before { content: url(/static/icons/cancel.png); }
+.icon_clear:before { content: url(/static/icons/clear.png); }
+.icon_close:before { content: url(/static/icons/close.png); }
+.icon_edit:before { content: url(/static/icons/edit.png); }
+.icon_find:before { content: url(/static/icons/find.png); }
+.icon_help:before { content: url(/static/icons/help.png); }
+.icon_home:before { content: url(/static/icons/home.png); }
+.icon_logout:before { content: url(/static/icons/logout.png); }
+.icon_mail:before { content: url(/static/icons/mail.png); }
+.icon_ok:before {content: url(/static/icons/ok.png); }
+.icon_prefs:before {content: url(/static/icons/prefs.png); }
+.icon_password:before {content: url(/static/icons/password.png); }
+.icon_remove:before { content: url(/static/icons/remove.png); }
+.icon_system:before { content: url(/static/icons/system.png); }
+.icon_backward:before { content: url(/static/icons/backward.png); }
+.icon_forward:before { content: url(/static/icons/forward.png); }
+.icon_play:before { content: url(/static/icons/play.png); }
+.icon_stop:before { content: url(/static/icons/stop.png); }
+.icon_pause:before { content: url(/static/icons/pause.png); }
+.icon_record:before { content: url(/static/icons/record.png); }
+.icon_rss:before { content: url(/static/icons/rss.png); }
+
+@media (max-width: 480px) {
+	label { display: none; }
+	input[type="radio"]+label, input[type="checkbox"]+label {
+		display: block; }
+	input[type="text"], input[list], input[type="email"], input[type="tel"], input[type="search"], input[type="number"], input[type="url"], input[type="range"], input[type="date"], input[type="time"], input[type="color"], select, option {
+		margin-top: 0.5em;
+	}
+}
+
+@media print { 
+	th { color: black; }
+	h1, h2 { border-color: black; }
+	div#header h1 { border: 1px solid black; }
+	a.button, button { background: white; 
+		text-decoration: none; border-radius: 5px; }
+}

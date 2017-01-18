@@ -1,0 +1,27 @@
+* { color: black; }
+
+div#page { background: #f6f6f6; }	
+header { border-color: #bdbdbd; background: #ffffff; }
+footer { border-color: #bdbdbd; background: #ffffff; }
+
+h1 { border-bottom-color: #04b404 ; }
+h2 { border-bottom-color: #bdbdbd ; }
+
+table, td, th { border-color: #a4a4a4; }
+table { background: #e6e6e6; }
+th, th a { color: #04b404; }
+tbody tr:nth-child(2n+1) { background: #ffffff; }
+
+textarea { color: #bdbdbd; }
+option {color : #bdbdbd; }
+
+legend { border-bottom-color: #bdbdbd; }
+
+a.button, button { background: linear-gradient(#d8d8d8, #ffffff); color : black; border-color: #a4a4a4; }
+
+a.button:active, button:active { background: #04b404; }
+
+ul.vbox li { background: #04b404; border-color: #a4a4a4; }
+ul.vbox a { background: linear-gradient(#d8d8d8, #ffffff); }
+
+dt { font-weight : bold; }
